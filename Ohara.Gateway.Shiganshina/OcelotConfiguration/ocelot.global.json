@@ -1,0 +1,31 @@
+{
+  "GlobalConfiguration": {
+    "RequestIdKey": "x-correlation-id",
+    "DownstreamScheme": "http",
+    "UseServiceDiscovery": false
+  },
+  "RateLimitOptions": {
+    "ClientWhitelist": [],
+    "EnableRateLimiting": true,
+    "Period": "1s",
+    "HttpStatusCode": 428,
+    "QuotaExceededMessage": "Too Many Requests!",
+    "PeriodTimespan": 1,
+    "Limit": 1
+  },
+  "HttpHandlerOptions": {
+    "UseTracing": true
+  },
+  "LoadBalancerOptions": {
+    "Type": "RoundRobin"
+  },
+  "QoSOptions": {
+    "ExceptionsAllowedBeforeBreaking": 3,
+    "DurationOfBreak": 10000,
+    "TimeoutValue": 5000
+  },
+  "SwaggerEndPoints": [
+    {
+    }
+  ]
+}

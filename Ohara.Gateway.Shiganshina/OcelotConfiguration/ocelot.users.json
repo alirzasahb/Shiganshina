@@ -1,0 +1,41 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/register",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/AuthMicro/Register",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5053
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/login",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/AuthMicro/Login",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5053
+        }
+      ],
+      "RouteClaimsRequirement": {
+        "userType": "*"
+      }
+    }
+  ]
+}
